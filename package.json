@@ -1,0 +1,36 @@
+{
+  "name": "<name>",
+  "version": "0.0.0",
+  "description": "<description>",
+  "main": "lib/<filename>.js",
+  "types": "lib/<filename>.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.4",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c0deritter/<name>.git"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "Coderitter GmbH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c0deritter/<name>/issues"
+  },
+  "homepage": "https://github.com/c0deritter/<name>#readme"
+}
