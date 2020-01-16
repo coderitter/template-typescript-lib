@@ -1,32 +1,35 @@
 {
-  "name": "<name>",
+  "name": "your-lib-name",
   "version": "0.0.0",
-  "description": "<description>",
-  "main": "lib/<filename>.js",
-  "types": "lib/<filename>.d.ts",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
   "dependencies": {},
   "devDependencies": {
-    "ts-node": "^8.4.1",
-    "typescript": "^3.7.2"
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
   },
   "scripts": {
-    "test": "mocha -r ts-node/register test/**/*.spec.ts",
-    "build": "tsc"
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "build": "rm -rf lib && tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/c0deritter/<name>.git"
+    "url": "git+https://github.com/your-company/your-lib-name.git"
   },
   "keywords": [
     ""
   ],
-  "author": "Coderitter GmbH",
-  "license": "ISC",
+  "author": "Your Company Name",
   "bugs": {
-    "url": "https://github.com/c0deritter/<name>/issues"
+    "url": "https://github.com/your-company/your-lib-name/issues"
   },
-  "homepage": "https://github.com/c0deritter/<name>#readme"
+  "homepage": "https://github.com/your-company/your-lib-name#readme"
 }
