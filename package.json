@@ -17,7 +17,7 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "test": "mocha -r ts-node/register \"test/**/*.test.ts\"",
     "build": "rm -rf lib && tsc"
   },
   "repository": {
@@ -27,7 +27,7 @@
   "keywords": [
     ""
   ],
-  "author": "Your Company Name",
+  "author": "Coderitter GmbH",
   "bugs": {
     "url": "https://github.com/your-company/your-lib-name/issues"
   },
