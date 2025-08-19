@@ -7,15 +7,6 @@
   "files": [
     "lib/**/*"
   ],
-  "dependencies": {},
-  "devDependencies": {
-    "@types/chai": "^4.2.7",
-    "@types/mocha": "^5.2.7",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.4"
-  },
   "scripts": {
     "test": "mocha -r ts-node/register \"test/**/*.test.ts\"",
     "build": "rm -rf lib && tsc"
@@ -31,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/your-company/your-lib-name/issues"
   },
-  "homepage": "https://github.com/your-company/your-lib-name#readme"
+  "homepage": "https://github.com/your-company/your-lib-name#readme",
+  "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "chai": "^5.3.1",
+    "mocha": "^11.7.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
 }
