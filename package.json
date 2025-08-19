@@ -1,15 +1,28 @@
 {
   "name": "your-lib-name",
   "version": "0.0.0",
+  "type": "module",
+  "sideEffects": false,
   "description": "",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "lib/**/*"
+    "dist"
   ],
   "scripts": {
-    "test": "mocha -r ts-node/register \"test/**/*.test.ts\"",
-    "build": "rm -rf lib && tsc"
+    "build": "rimraf dist && tsup src/index.ts --format esm,cjs --sourcemap --minify --treeshake --clean --platform neutral --target es2020",
+    "types": "tsc -p tsconfig.types.json",
+    "typecheck": "tsc -p tsconfig.base.json --noEmit",
+    "prepare": "npm run build && npm run types",
+    "test": "mocha -r ts-node/register \"test/**/*.test.ts\""
   },
   "repository": {
     "type": "git",
@@ -28,7 +41,9 @@
     "@types/mocha": "^10.0.10",
     "chai": "^5.3.1",
     "mocha": "^11.7.1",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
     "typescript": "^5.9.2"
   }
 }
